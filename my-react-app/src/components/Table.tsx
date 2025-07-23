@@ -3,7 +3,7 @@ import  { useState } from 'react' ;
 
 import type { ColDef } from "ag-grid-community";
 import { AllCommunityModule, ModuleRegistry } from "ag-grid-community";
-import { AgGridReact } from "ag-grid-react";
+import { AgGridReact } from 'ag-grid-react';
 
 
 ModuleRegistry.registerModules([AllCommunityModule]);
@@ -35,20 +35,22 @@ function Table() {
             { field: "price" },
             { field: "electric" },
         ]);
-
-        const defaultColDef:ColDef = {
-            flex:1 
-        }
-
+    const defaultColDef: ColDef = {
+      flex: 1,
+      minWidth: 80,
+      filter: true,
+      floatingFilter: true,
+    };
   return (
-    <div style={{height:"100%" , width:"100%"}}>
-        <AgGridReact
-          rowData={rowData}
-          columnDefs={colDefs}
-          defaultColDef={defaultColDef}
-        />
+    <div className='mx-auto h-35 w-full' >
+         <AgGridReact 
+          rowData={rowData} 
+          columnDefs={colDefs} 
+           defaultColDef={defaultColDef} 
+          />
+          <h1>Car Inventory</h1>
     </div>
-  )
+  );
 }
 
 export default Table
