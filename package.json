@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@tanstack/react-table": "^8.21.3",
+    "ag-grid-react": "^34.0.2"
+  }
+}
