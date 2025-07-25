@@ -1,6 +1,4 @@
-md
-Copy
-Edit
+
 # 🧠 EyeGoTask – Smart Dashboard App
 
 EyeGoTask is a modern, responsive dashboard web application built with the latest technologies:  
