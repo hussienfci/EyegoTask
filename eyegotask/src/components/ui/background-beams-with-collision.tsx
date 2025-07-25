@@ -70,7 +70,7 @@ export const BackgroundBeamsWithCollision = ({
     <div
       ref={parentRef}
       className={cn(
-        " h-full md:h-[40rem] from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden",
+        "h-96 md:h-[40rem] to-neutral-100 dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center ",
         // h-screen if you want bigger
         className
       )}
@@ -79,8 +79,8 @@ export const BackgroundBeamsWithCollision = ({
         <CollisionMechanism
           key={beam.initialX + "beam-idx"}
           beamOptions={beam}
-          containerRef={containerRef as React.RefObject<HTMLDivElement>}
-          parentRef={parentRef as React.RefObject<HTMLDivElement>}
+          containerRef={containerRef as any }
+          parentRef={parentRef as any}
         />
       ))}
 

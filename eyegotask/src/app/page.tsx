@@ -1,22 +1,18 @@
 "use client";
-import { Provider } from "react-redux";
-import store from "../../lib/store";
-import Dashboard from "../../pages/dashboard/page";
-import BackgroundBeamsWithCollisionDemo from "../../components/normal/Background";
-
-import { BackgroundBeamsWithCollision } from "../../components/ui/background-beams-with-collision";
-  
+// import { Provider } from "react-redux";
+// import store from "@/store/store";
+import Register from "./Register/page";
+import AuthProvider from "@/components/normal/AuthProvider";
 export default function Home() {
   return (
-   <div >
-    
-    <Provider store={store}>
-      <BackgroundBeamsWithCollisionDemo>
 
-          <Dashboard />
-      </BackgroundBeamsWithCollisionDemo>
-    </Provider>
-   </div>
+      <div  className="w-full">
+        
+              <AuthProvider>
+
+                    <Register/>
+              </AuthProvider>
+      </div>
    
   );
 }
